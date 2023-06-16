@@ -6,7 +6,7 @@ from draw import drawPygameRect
 
 from CellType import CellType
 from update import update
-from src.utils import generate_random_integer
+from utils import generate_random_integer
 
 
 class Board:
