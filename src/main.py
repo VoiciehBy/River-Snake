@@ -62,7 +62,6 @@ if __name__ == "__main__":
             update(screen.get_rect())
             clear_screen()
             board.draw()
-            snake.draw()
 
         clock.tick(8)
         drawPointsCounter()

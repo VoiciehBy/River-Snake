@@ -11,15 +11,16 @@ class Snake:
         self.segments.append(head)
         self.direction = Direction.RIGHT
 
-    def draw(self):
+    def update(self):
         for cell in self.segments:
-            cell.draw()
+            cell.set_type(CellType.SNAKE)
 
     def move(self, cell: Cell):
+        self.update()
         tail: Cell = self.segments.pop()
         tail.cell_type = CellType.NONE
         self.head = cell
-        self.head.cell_type = CellType.SNAKE
+        self.head.set_type(CellType.SNAKE)
         self.segments.insert(0, self.head)
 
     def eat(self):
