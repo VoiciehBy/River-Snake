@@ -2,6 +2,7 @@ from enum import Enum
 
 
 class CellType(Enum):
-    NONE = 0,
-    SNAKE = 1,
-    FOOD = 2
+    NONE = 1,
+    SNAKE = 2,
+    SNAKE_HEAD = 4,
+    FOOD = 3

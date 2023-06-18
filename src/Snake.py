@@ -20,7 +20,7 @@ class Snake:
         tail: Cell = self.segments.pop()
         tail.cell_type = CellType.NONE
         self.head = cell
-        self.head.set_type(CellType.SNAKE)
+        self.head.set_type(CellType.SNAKE_HEAD)
         self.segments.insert(0, self.head)
 
     def eat(self):

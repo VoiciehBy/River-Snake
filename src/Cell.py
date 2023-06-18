@@ -13,6 +13,8 @@ class Cell:
         self.cell_type = cell_type
         if self.cell_type == CellType.SNAKE:
             self.color = Color("green")
+        elif self.cell_type == CellType.SNAKE_HEAD:
+            self.color = Color("cyan")
         elif self.cell_type == CellType.FOOD:
             self.color = Color("red")
         else:
@@ -22,8 +24,12 @@ class Cell:
 
     def update(self):
         self.rect = Rect(side * self.x, side * self.y, side, side)
+        if self.cell_type == CellType.NONE:
+            self.color = clearColor
         if self.cell_type == CellType.SNAKE:
             self.color = Color("green")
+        elif self.cell_type == CellType.SNAKE_HEAD:
+            self.color = Color("cyan")
         elif self.cell_type == CellType.FOOD:
             self.color = Color("red")
         else:
