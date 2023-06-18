@@ -1,6 +1,6 @@
-from constants import screen
+from constants import screen, clearColor
 from pygame import Color, Rect, Surface
-from draw import drawPygameRect
+from draw import drawPygameRect, drawImageOverRect
 
 
 class VSprite:
@@ -11,3 +11,4 @@ class VSprite:
 
     def draw(self, surface=screen):
         drawPygameRect(surface, self.color, self.rect)
+        drawImageOverRect(surface,self.texture,self.rect)

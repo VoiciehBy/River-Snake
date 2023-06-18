@@ -8,7 +8,7 @@ class Snake:
         self.head = head
         self.head.cell_type = CellType.SNAKE
         self.segments = list([])
-        self.segments.append(head)
+        self.segments.append(self.head)
         self.direction = Direction.RIGHT
 
     def update(self):

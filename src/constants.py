@@ -1,4 +1,4 @@
-from pygame import DOUBLEBUF, SRCALPHA, Color, Rect
+from pygame import DOUBLEBUF, SRCALPHA, Color, Rect, image
 from pygame.display import set_mode
 
 window_name = "River River Snake by VoiciehBy"
@@ -21,3 +21,6 @@ default_rect_border_radius = int(font_size/2)
 
 points_counter_rect = Rect(window_width - 4 * d_font_size,
                            window_height - 2 * d_font_size, d_font_size, d_font_size)
+
+snake_cell_image = image.load("../img/snake_cell.png")
+food_image = image.load("../img/food.png")
