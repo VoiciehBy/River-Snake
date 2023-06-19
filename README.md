@@ -7,7 +7,7 @@ Inspirations:
 - [Wonsz żeczny (eng. *"River Snake"*) ](https://www.youtube.com/watch?v=aVPj0phGjyU)
 - [Red Apple](https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg)
 
-Dependecnies:
+Dependencies:
 - pygame
 - numpy
 
