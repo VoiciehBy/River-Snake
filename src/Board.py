@@ -22,10 +22,12 @@ class Board:
                 self.cells[y][x].draw()
 
     def generate_food(self):
-        y: int = generate_random_integer(0, self.height - 1)
-        x: int = generate_random_integer(0, self.width - 1)
+        y: int = generate_random_integer(1, self.height - 1)
+        x: int = generate_random_integer(1, self.width - 1)
         while self.cells[y][x].get_type() == CellType.SNAKE:
-            y: int = generate_random_integer(0, self.height - 1)
-            x: int = generate_random_integer(0, self.width - 1)
+            y: int = generate_random_integer(1, self.height - 1)
+            x: int = generate_random_integer(1, self.width - 1)
         self.cells[y][x].set_type(CellType.FOOD)
-        update(self.cells[y][x].rect)
+
+    def reset(self, width, height):
+        self.__init__(width, height)

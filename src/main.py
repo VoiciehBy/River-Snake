@@ -1,7 +1,7 @@
 from init import init
 from pygame_utils import start_pygame_clock, clear_screen
 from Game import Game
-from drawScreen import drawPausedScreen, drawEndingScreens
+from drawScreen import drawPausedScreen, drawEndingScreens, drawNewGameScreen
 from handleEvents import handleEvents
 from objects import board, snake
 from Cell import Cell
@@ -18,10 +18,15 @@ if __name__ == "__main__":
     while 1:
         if Game.is_it_the_end():
             drawEndingScreens()
-            break
+            Game.enter_wait_state()
+
+        elif Game.is_game_waiting():
+            drawNewGameScreen()
+            handleEvents()
 
         elif Game.is_game_paused():
             drawPausedScreen()
+            handleEvents()
 
         elif Game.is_game_playing():
             handleEvents()

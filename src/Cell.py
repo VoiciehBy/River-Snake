@@ -17,13 +17,10 @@ class Cell:
         self.cell_sprite = VSprite(clearColor, self.rect, screen)
 
         if self.cell_type == CellType.SNAKE:
-            self.cell_sprite.set_color(Color("green"))
             self.cell_sprite.set_texture(snake_cell_image)
         elif self.cell_type == CellType.SNAKE_HEAD:
-            self.cell_sprite.set_color(Color("cyan"))
             self.cell_sprite.set_texture(snake_cell_image)
         elif self.cell_type == CellType.FOOD:
-            self.cell_sprite.set_color(Color("magenta"))
             self.cell_sprite.set_texture(food_image)
 
     def draw(self):
@@ -32,13 +29,10 @@ class Cell:
         if self.cell_type == CellType.NONE:
             self.cell_sprite.set_color(clearColor)
         elif self.cell_type == CellType.SNAKE:
-            self.cell_sprite.set_color(Color("green"))
             self.cell_sprite.set_texture(snake_cell_image)
         elif self.cell_type == CellType.SNAKE_HEAD:
-            self.cell_sprite.set_color(Color("cyan"))
             self.cell_sprite.set_texture(snake_cell_image)
         elif self.cell_type == CellType.FOOD:
-            self.cell_sprite.set_color(Color("magenta"))
             self.cell_sprite.set_texture(food_image)
 
         self.cell_sprite.draw()

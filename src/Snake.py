@@ -7,6 +7,7 @@ class Snake:
     def __init__(self, head: Cell):
         self.head = head
         self.head.cell_type = CellType.SNAKE
+        self.initial_head = self.head
         self.segments = list([])
         self.segments.append(self.head)
         self.direction = Direction.RIGHT
@@ -31,3 +32,6 @@ class Snake:
             if i == cell:
                 return True
         return False
+
+    def reset(self):
+        self.__init__(self.initial_head)

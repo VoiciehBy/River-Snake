@@ -1,12 +1,19 @@
 import pygame
-from objects import snake
+from objects import snake, board
+from constants import board_width, board_height
 from Game import Game
 
 from Direction import Direction
 
 
 def on_return_pressed():
-    Game.start_game()
+    if(Game.is_game_waiting()):
+        snake.reset()
+        Game.reset_points()
+        board.reset(board_width, board_height)
+        Game.start_new_game()
+    else:
+        Game.start_game()
 
 
 def on_p_key_pressed():
